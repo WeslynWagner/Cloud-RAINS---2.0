@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<title>Cloud RAINS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Add the Google JS API Client -->
+<script src="https://apis.google.com/js/client.js"></script>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <!-- Content in the sidebar -->
+  <h4 class="w3-bar-item"><b>Components</b></h4>
+  <!-- input type="text" />
+    <button>Search</button -->
+  <div class="w3-bar w3-black"><div class="w3-bar-item">Compute</div></div>
+   <img src="Servers.PNG" alt="Sver Img1" width="100%">
+  <div class="w3-bar w3-black"><div class="w3-bar-item">Network</div></div>
+   <img src="Networks.PNG" alt="Ntwk Img1" width="100%">
+  <div class="w3-bar w3-black"><div class="w3-bar-item">Storage</div></div>
+   <img src="Storage.PNG" alt="Strg Img1" width="100%">
+     <div class="w3-bar w3-black">
+     <div class="w3-bar-item">Operating System</div>
+     </div>
+   <img src="OperatingSystems.PNG" alt="OS Img1" width="100%">
+  <div class="w3-bar w3-black"><div class="w3-bar-item">Software</div></div>
+   <img src="Software.PNG" alt="Stwr Img1" width="100%">
+</div>
+
+<!-- Main Starts Here -->
+<div id="main">
+    <!-- Navbar including menu button -->
+<div class="w3-top">
+<div class="w3-container">
+    <div class="w3-bar w3-light-grey">
+  <button id="openNav" class="w3-button w3-left w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+  
+    <div class="w3-dropdown-hover">
+    <button class="w3-button">Account</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Access Control</a>
+        <a href="#" class="w3-bar-item w3-button">Settings</a>
+        <a href="#" class="w3-bar-item w3-button">Logout</a>
+         </div></div>
+         
+        <div class="w3-dropdown-hover">
+    <button class="w3-button">Domain</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Engineering</a>
+        <a href="#" class="w3-bar-item w3-button">BioInformatics</a>
+        <a href="#" class="w3-bar-item w3-button">Econometrics</a>
+        <a href="#" class="w3-bar-item w3-button">Astronomy</a>
+         </div></div>
+         
+    <div class="w3-dropdown-hover">
+    <button class="w3-button">Template</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button" onclick="showLampStackTemplate()">Lamp Stack</a>
+        <a href="#" class="w3-bar-item w3-button">Hadoop Spark</a>
+        <a href="#" class="w3-bar-item w3-button">TensorFlow</a>
+         </div></div>
+    
+    <div class="w3-dropdown-hover">
+    <button class="w3-button">Help</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">FAQ</a>
+        <a href="#" class="w3-bar-item w3-button">API</a>
+        <a href="#" class="w3-bar-item w3-button">Docs</a>
+         </div></div>
+  </div>
+</div>
+</div>
+
+<!--Background Image-->
+<img src="http://cdn.shopify.com/s/files/1/1608/4509/products/light-grey-grid-bullet-journal-paper_1024x1024.png?v=1483462675" alt="" width="100%" id="background">
+
+<!-- BuildBar -->
+<div class="w3-bottom">
+<div class="w3-container">
+    <div class="w3-bar w3-light-grey">
+    <div class="w3-center">
+ <button class="w3-button w3-round-xlarge w3-border w3-border-black w3-hover-blue" onclick="Build()"><b>Build</b></button>
+	</div>
+    </div>
+ </div>
+ </div>
+   
+</div>
+<!--End of Main-->
+
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+function Build() {
+  window.open("https://console.cloud.google.com/launcher/details/click-to-deploy-images/lamp");
+}
+
+    
+function showLampStackTemplate() {
+        if (document.getElementById("background").src == "http://cdn.shopify.com/s/files/1/1608/4509/products/light-grey-grid-bullet-journal-paper_1024x1024.png?v=1483462675") 
+        {
+            document.getElementById("background").src = "LampStack.PNG";
+        }
+        else 
+        {
+            document.getElementById("background").src = "LampStack.PNG";
+        }
+    }
+</script>
+
+</body>
+</html>

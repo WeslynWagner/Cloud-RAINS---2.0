@@ -1,0 +1,5 @@
+curl -O "https://repo.stackdriver.com/stack-install.sh"
+sudo bash stack-install.sh --write-gcm
+
+#to check if it was installed 
+dpkg -l stackdriver-agent
